@@ -1,0 +1,6 @@
+num1 = int(input("Enter the First number\n"))
+num2 = int(input("Enter the second number\n"))
+if(num1>num2): 
+    print('Larger number is', num1,"\n")
+else :
+    print("Larger number is", num2,"\n")
