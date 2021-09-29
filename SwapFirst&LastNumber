@@ -1,0 +1,14 @@
+def swappFirstLast(newList):
+    size = len(newList)
+     
+    # Swapping
+    temp = newList[0]
+    newList[0] = newList[size - 1]
+    newList[size - 1] = temp
+     
+    return newList
+     
+# Driver code
+newList = [12, 30, 9, 50, 20]
+ 
+print(swappFirstLast(newList))
