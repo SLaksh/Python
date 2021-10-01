@@ -1,0 +1,19 @@
+String1 = '''I'm a "French"'''
+print("Initial String with use of Triple Quotes: ")
+print(String1)
+ 
+# Escaping Single Quote
+String1 = 'I\'m a "German"'
+print("\nEscaping Single Quote: ")
+print(String1)
+ 
+# Escaping Double Quotes
+String1 = "I'm an \"Indian\""
+print("\nEscaping Double Quotes: ")
+print(String1)
+ 
+# Printing Paths with the
+# use of Escape Sequences
+String1 = "C:\\Python\\MyFiles\\"
+print("\nEscape character with Backslashes: ")
+print(String1)
