@@ -1,0 +1,47 @@
+List = []
+print("Initial blank List: ")
+print(List)
+  
+# Addition of Elements 
+# in the List
+List.append(11)
+List.append(22)
+List.append(44)
+List.append(55)
+List.append(66)
+List.append(113)
+print("\nList after Addition of Three elements: ")
+print(List)
+  
+# Adding elements to the List
+# using Iterator
+for i in range(1, 5):
+    List.append(i)
+print("\nList after Addition of elements: ")
+print(List)
+  
+# Adding Tuples to the List
+List.append((50, 60))
+print("\nList after Addition of a Tuple: ")
+print(List)
+  
+# Addition of List to a List
+List2 = ['Hi from', 'LAKSH']
+List.append(List2)
+print("\nList after Addition of a List: ")
+print(List)
+
+# Addition of Element at 
+# specific Position
+# (using Insert Method)
+List.insert(3, 102)
+List.insert(0, 'Eurekha')
+print("\nList after performing Insert Operation: ")
+print(List)
+
+# Addition of multiple elements
+# to the List at the end
+# (using Extend Method)
+List.extend([80, 'All is', 'Well'])
+print("\nList after performing Extend Operation: ")
+print(List)
