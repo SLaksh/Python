@@ -1,0 +1,36 @@
+import operator
+  
+# Initializing list
+l = [81, 25, 46, 7, 288, 44, 12, 87, 5]
+  
+# printing original list 
+print ("The original list is : ",end="")
+for i in range(0,len(l)):
+    print (l[i],end=" ")
+  
+print ("\r")
+  
+# using setitem() to assign 3 at 4th position
+operator.setitem(l,3,33)
+  
+# printing modified list after setitem()
+print ("The modified list after setitem() is : ",end="")
+for i in range(0,len(l)):
+    print (l[i],end=" ")
+  
+print ("\r")
+  
+# using delitem() to delete value at 2nd index
+operator.delitem(l,1)
+  
+# printing modified list after delitem()
+print ("The modified list after delitem() is : ",end="")
+for i in range(0,len(l)):
+    print (l[i],end=" ")
+  
+print ("\r")
+  
+# using getitem() to access 4th element
+print ("The 4th element of list is : ",end="")
+print (operator.getitem(l,3))
+
