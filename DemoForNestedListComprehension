@@ -1,0 +1,72 @@
+import functools
+
+#  filtering odd numbers
+lst = filter(lambda x : x % 2 == 1, range(1, 50))
+print (list(lst))
+   
+#  filtering odd square which are divisible by 5
+lst1 = filter(lambda x : x % 5 == 0, 
+      [x ** 2 for x in range(1, 30) if x % 2 == 1])
+print (list(lst1))
+   
+#   filtering negative numbers
+lst2 = filter((lambda x: x < 0), range(-15,5))
+print (list(lst2))
+   
+#  implementing max() function, using
+print (functools.reduce(lambda a,b: a if (a > b) else b, [7, 12, 45, 100,292, 312, 413, 15]))
+
+#    ** demo for NESTED LIST COMPREHENSION
+#  nORMALCODE TO PRINT MATRIX OF FORM
+        # [[0, 1, 2, 3, 4],
+        #  [0, 1, 2, 3, 4],
+        #  [0, 1, 2, 3, 4],
+         # [0, 1, 2, 3, 4],
+          # [0, 1, 2, 3, 4]]
+          
+matrix = []
+  
+for i in range(5):
+      
+    # Append an empty sublist inside the list
+    matrix.append([])
+      
+    for j in range(7):
+        matrix[i].append(j)
+          
+print(matrix)
+
+# But with Nested list comprehension
+
+matrix = [[j for j in range(7)] for i in range(5)]
+  
+print(matrix)
+
+#    *** NORMAL WAY OF FLATTENING A 2D Matrix
+
+# 2-D List
+matrix = [[1, 2, 3], [4, 5], [6, 7, 8, 9], [3,5,7], [2,2,2,2,2], [4,5,4,5], [7,7,8,8,8,]]
+print(matrix)
+flatten_matrix = []
+  
+for sublist in matrix:
+    for val in sublist:
+        flatten_matrix.append(val)
+          
+print(flatten_matrix)
+
+#   ** BUT THE SAME IN LIST COMPREHENSION IS
+
+flatten_matrix1 = [val for sublist in matrix for val in sublist]
+  
+print(" The Matrix flattened in List Comprehension is : ", flatten_matrix1)
+
+#   **DEMO FOR FLATTENING THE MATRIX WITH CONDITIONS
+
+# 2-D List of planets
+planets = [['Mercury', 'Venus', 'Earth'], ['Mars', 'Jupiter', 'Saturn'], ['Uranus', 'Neptune', 'Pluto']]
+  
+# Nested List comprehension with an if condition
+flatten_planets = [planet for sublist in planets for planet in sublist if len(planet) < 6]
+          
+print(flatten_planets)
