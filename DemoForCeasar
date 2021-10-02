@@ -1,0 +1,26 @@
+text = input("Enter your message: ")
+integer = int(input("Enter a valid shift value: "))
+while not (integer<=25 and integer>0):
+    integer = int(input("Re-enter a valid shift value: "))
+cipher = ''
+for char in text:
+    if char.isalpha():
+        if char.isupper():
+            code = ord(char) + integer
+            if code > ord('Z'):
+                code = ((code - ord('Z'))+ ord('A') - 1)
+                cipher += chr(code)
+                continue
+            cipher += chr(code)
+            continue
+        if char.islower():
+            code = ord(char) + integer
+            if code > ord('z'):
+                code = ((code - ord('z'))+ ord('a') - 1)
+                cipher += chr(code)
+                continue
+            cipher += chr(code) 
+            continue
+    cipher += char 
+    
+print(cipher)
