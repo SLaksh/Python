@@ -1,0 +1,51 @@
+import array as arr
+ 
+# array with int type
+a = arr.array('i', [11, 22, 33, 44, 55, 66, 77, 88])
+ 
+ 
+print ("\nArray before insertion : ", end =" ")
+for i in range (0, 8):
+    print (a[i], end =" ")
+print()
+ 
+# inserting array using insert() function
+
+a.insert(10, 49)
+ 
+print ("\nArray after insertion : ", end =" ")
+for i in (a):
+    print (i, end =" ")
+print()
+
+# inserting element using append() function
+a.append(111)
+print ("\nArray after appending : ", end =" ")
+for i in (a):
+    print (i, end =" ")
+print()
+
+# using pop() to remove element at 2nd position
+print ("\nThe popped element is : ", end ="")
+print (a.pop(2))
+ 
+# printing array after popping
+print ("\nThe array after popping is : ", end ="")
+for i in (a):
+    print (i, end =" ")
+ 
+print("\r")
+
+# Print elements of a range using Slice operation
+Sliced_array = a[3:8]
+print("\nSlicing elements in a range 3-8: ")
+print(Sliced_array)
+
+# Printing elements from beginning till end
+Slice_array = a[:]
+print("\nPrinting all elements using slice operation: ")
+print(Slice_array)
+
+# using index() to print index of the elements
+print ("The index of  22 is : ", end ="")
+print (a.index(22))
