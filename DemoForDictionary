@@ -1,0 +1,68 @@
+# *************Creating an empty Dictionary*********
+Dict = {}
+print("Empty Dictionary: ")
+print(Dict)
+ 
+# Adding elements one at a time
+Dict[0] = 'Shiva'
+Dict[1] = 'HolyMother'
+Dict[2] = 'Vishnu'
+Dict[3] = 'Jesus'
+Dict[4] = 'Allah'
+Dict[5] = 'Buddha'
+Dict[6] = 'GuruNanak'
+Dict[7] = "Mahavir"
+print("\nDictionary after adding 3 elements: ")
+print(Dict)
+ 
+# Adding set of values  to a single Key
+Dict['GreekGods'] = {'Zeus', 'Apollo','Aphrodite'}
+print("\nDictionary after adding 3 elements: ")
+print(Dict)
+ 
+# Updating existing Key's Value
+Dict[10] = 'Lalithambigae'
+print("\nUpdated key value: ")
+print(Dict)
+ 
+# Adding Nested Key value to Dictionary
+Dict[5] = {'Nested' :{'1' : 'Gods', '2' : 'Are', '3' : 'Unique'}}
+print("\nAdding a Nested Key: ")
+print(Dict)
+
+Dict[9] = { 5 : 'Welcome', 6 : 'To', 7 : 'World Of Gods',
+        'Chinese' : {1 : 'Yuhuang Shangdi', 2 : 'Guan Yin', 3 : 'Long Wang'},
+        'Japanes' : {1 : 'Ebisu', 2 : 'Amaterasu Ōmikami'}}
+print(Dict)
+
+# accessing a element using key
+print("\nAccessing a element using key:")
+print(Dict['GreekGods'])
+ 
+# accessing a element using key
+print("\nAccessing a element using key:")
+print(Dict[1])
+
+# accessing a element using get() method
+print("\nAccessing a element using get:")
+print(Dict.get(6))
+
+# Deleting a Key from Dictionary
+del Dict[7]
+print("\nDeleting a key from Dictionary: ")
+print(Dict)
+
+# Deleting a Key from  Nested Dictionary
+del Dict[9]['Chinese'][2]
+print("\nDeleting a key from Nested Dictionary: ")
+print(Dict)
+
+# Deleting a key using pop() method
+pop_ele = Dict.pop(1)
+print('\nDictionary after deletion: ' + str(Dict))
+print('Value associated to poped key is: ' + str(pop_ele))
+
+# Deleting entire Dictionary
+Dict.clear()
+print("\nDeleting Entire Dictionary: ")
+print(Dict)
