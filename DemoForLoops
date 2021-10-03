@@ -1,0 +1,50 @@
+# printing a number
+for i in range(10):
+    print(i, end=" ")
+print()
+
+#printing a list
+l=[1,2,3,4,5,6,7,8,9,10]
+for i in range(len(l)):
+    print(l[i], end ="  " )
+print()
+
+
+# Python program to illustrate # Single statement while block
+count = 0
+while (count < 5): count += 1; print("Oh My Kadavulae")
+
+
+#Python while loop with continue - returns the control to the beginning of the loop
+i = 0
+a = 'IamTheGodChoosedChild'
+ 
+while i < len(a):
+    if a[i] == 'e' or a[i] == 's':
+        i += 1
+        continue
+         
+    print('The Letter is :', a[i])
+    i += 1
+
+# while-else loop DEMO - With Break and Without Break
+ 
+i = 0
+while i < 4:
+    i += 1
+    print(i)
+else:  # Executed because no break in for
+    print("No Break\n")
+ 
+i = 0
+while i < 4:
+    i += 1
+    print(i)
+    break
+else:  # Not executed as there is a break
+    print("No Break")
+    
+# DEMO of While loop with sentinel value i.e -1
+
+while a != -1:
+    a = int(input('Enter a number (-1 to quit): '))
