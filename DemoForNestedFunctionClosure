@@ -1,0 +1,40 @@
+# ************Python program to illustrate functions
+# can be treated as objects
+def shout(text):
+    return text.upper()
+  
+print (shout('Hello'))
+  
+yell = shout
+  
+print (yell('Hello'))
+
+#  ***************** Program to illustrate function passed to another function
+def shout(text):
+    return text.upper()
+  
+def whisper(text):
+    return text.lower()
+  
+def greet(fun):
+    # storing the argument in a variable
+    greeting = fun("""Hi, I am created by a function
+                    passed as an argument.""")
+    print (greeting) 
+  
+greet(shout)    # function is passed as argument to another function
+greet(whisper)
+
+#  *************Python program to illustrate CLOSURES (Holds a copy of the variable in function)
+def outerFunction(text):
+    text = text
+ 
+    def innerFunction():
+        print(text)
+ 
+    # Note we are returning function WITHOUT parenthesis THE CLOSURE 
+    return innerFunction 
+ 
+if __name__ == '__main__':
+    myFunction = outerFunction('Hey!')
+    myFunction()
