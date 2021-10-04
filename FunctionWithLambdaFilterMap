@@ -1,0 +1,40 @@
+# Python program to demonstrate lambda functions
+x = "I Am Amazing"
+  
+# lambda gets pass to print 
+(lambda x : print(x))(x)
+
+# Python program to illustrate cube of a number showing difference between def() and lambda().
+  
+def cube(y): 
+    return y*y*y; 
+    
+g = lambda x: x*x*x 
+print(g(6)) 
+    
+print(cube(12))
+
+#    ********* Another example for LAMBDA with power changing the base
+def power(n):
+    return lambda a : a ** n
+base = power(2)
+print("\nNow power is set to 2")
+print("8 powerof 2 = ", base(8))
+
+base = power(5)
+print("Now power is set to 5")
+# when calling base it gets executed with already set with newly 2
+print("8 powerof 5 = ", base(8))
+
+# Python program to demonstrate lambda functions inside map() and filter()
+  
+a = [100, 2, 8, 60, 5, 4, 3, 31, 10, 11]
+  
+# in filter either we use assignment or conditional operator, the pass actual  parameter will get return
+filteredValue = filter (lambda x: x % 2 == 0, a) 
+print(list(filteredValue))
+  
+# in map either we use assignment or conditional operator the result of 
+# the value will get returned
+mapedValue = map (lambda x: x % 2 == 0, a) 
+print(list(mapedValue))
